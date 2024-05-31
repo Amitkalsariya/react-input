@@ -8,7 +8,7 @@ function App() {
     let copyData=[...text]  
     copyData.push(inputValue)
     setText(copyData)
-    setInputValue("")
+
   }
 
   return (
