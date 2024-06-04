@@ -11,17 +11,17 @@ function App() {
     setInputvalue("")
 
   }
-  const handleDelete = (i) => {
-    const newText = [...text];
-    newText.splice(i, 1);
-    setText(newText);
+  const dataDelete = (i) => {
+    const data = [...text];
+    data.splice(i, 1);
+    setText(data);
     setInputvalue("")
   };
 
-  const handleUpdate = (i, el) => {
-    const newText = [...text];
-    newText[i] = el;
-    setText(newText);
+  const dataUpdate = (i, el) => {
+    const data = [...text];
+    data[i] = el;
+    setText(data);
     setInputvalue("")
   };
 
@@ -36,8 +36,8 @@ function App() {
           return (
             <div key={i}>
             <h1>{el}</h1>
-            <button onClick={() => handleDelete(i)}>Delete</button>
-          <button onClick={() => handleUpdate(i, inputvalue)}>Update</button>
+            <button onClick={() => dataDelete(i)}>Delete</button>
+          <button onClick={() => dataUpdate(i, inputvalue)}>Update</button>
             </div>
           )
         })
