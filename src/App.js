@@ -13,21 +13,21 @@ function App() {
   }
 
   const dataDelete = (i) => {
-    const data = [...text];
-    data.splice(i, 1);
-    setText(data);
+    const data = [...text]
+    data.splice(i,1)
+    setText(data)
     setInputvalue('')
-  };
+  }
 
   const dataUpdate = (i, el) => {
-    const data = [...text];
+    const data = [...text]
     data[i] = el;
-    setText(data);
+    setText(data)
     setInputvalue('')
-  };
+  }
 
   return (
-    <div className="container"> {/* Apply class for centering */}
+    <div className="container">
       <input type="text" className="input-field" placeholder='Enter Value..' value={inputvalue} onChange={(p) => { setInputvalue(p.target.value) }} />
       <button onClick={copyData}>Click Me</button>
       {
